@@ -108,10 +108,10 @@ Widget corpo() {
                 child: Text(
                   '>',
                   style: TextStyle(
-                      fontSize: 30, color: Color.fromARGB(220, 132, 131, 131)),
-                ))
+                      fontSize: 30, color: Color.fromARGB(150, 0, 0, 0)),
+                )),
           ],
-        )
+        ),
       ],
     ),
   );
