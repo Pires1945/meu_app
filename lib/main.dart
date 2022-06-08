@@ -124,7 +124,9 @@ Widget botao() {
 
 class Button extends StatefulWidget {
   @override
-  State<StatefulWidget> createState() => ButtonState();
+  ButtonState createState() {
+    return ButtonState();
+  }
 }
 
 String texto = 'Teste';
@@ -135,18 +137,14 @@ class ButtonState extends State<Button> {
     return Column(
       children: [
         Text(texto),
-        RaisedButton(
-          onPressed: () {
-            action;
-          },
-        ),
+        RaisedButton(onPressed: action),
       ],
     );
   }
-}
 
-void action() {
-  setState() {
-    texto = 'Funcionou';
+  void action() {
+    setState(() {
+      texto = 'Funcionou';
+    });
   }
 }
