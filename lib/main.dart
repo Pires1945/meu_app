@@ -18,6 +18,7 @@ class App extends StatelessWidget {
         children: [
           header(),
           corpo(),
+          botao(),
         ],
       )),
     ));
@@ -115,4 +116,37 @@ Widget corpo() {
       ],
     ),
   );
+}
+
+Widget botao() {
+  return Button();
+}
+
+class Button extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => ButtonState();
+}
+
+String texto = 'Teste';
+
+class ButtonState extends State<Button> {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Text(texto),
+        RaisedButton(
+          onPressed: () {
+            action;
+          },
+        ),
+      ],
+    );
+  }
+}
+
+void action() {
+  setState() {
+    texto = 'Funcionou';
+  }
 }
