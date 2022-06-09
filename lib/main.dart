@@ -1,5 +1,7 @@
 //255, 132, 17, 193
 
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -18,7 +20,6 @@ class App extends StatelessWidget {
         children: [
           header(),
           corpo(),
-          botao(),
         ],
       )),
     ));
@@ -98,19 +99,7 @@ Widget corpo() {
         Row(
           children: [
             Padding(padding: const EdgeInsets.only(left: 15, top: 50)),
-            Text(
-              'Conta',
-              style: TextStyle(fontSize: 28),
-            ),
-            Padding(
-                padding: const EdgeInsets.only(
-                  left: 270,
-                ),
-                child: Text(
-                  '>',
-                  style: TextStyle(
-                      fontSize: 30, color: Color.fromARGB(150, 0, 0, 0)),
-                )),
+            Button(),
           ],
         ),
       ],
@@ -136,8 +125,11 @@ class ButtonState extends State<Button> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Text(texto),
-        RaisedButton(onPressed: action),
+        TextButton(
+          style: TextButton.styleFrom(),
+          child: Text(texto),
+          onPressed: action,
+        )
       ],
     );
   }
