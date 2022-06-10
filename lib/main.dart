@@ -4,6 +4,7 @@ import 'dart:ffi';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:meu_app/button_conta.dart';
 
 main() {
   runApp(App());
@@ -124,13 +125,7 @@ class ButtonState extends State<Button> {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [
-        TextButton(
-          style: TextButton.styleFrom(),
-          child: Text(texto),
-          onPressed: action,
-        )
-      ],
+      children: [ButtonConta(texto, action)],
     );
   }
 
